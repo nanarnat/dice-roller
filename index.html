@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dice Roller</title>
+        <!-- tailwind cdn-->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4 font-inter">
+        <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col items-center w-full max-w-md">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6">Dice Roller</h1>
+            <!-- Dice Display-->
+            <div id="diceDisplay" class="w-32 h-32 flex items-center justify-center bg-gray-800 text-white rounded-xl mb-6 shadow-lg text-5xl">
+                <!-- SVG will go here-->
+            </div>
+            <!--Roll Button-->
+            <button id="rollButton" class="bg-blue-600 hover:text-transparent bg-clip-text font-extrabold bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-xl py-3 px-8 rounded-full shadow-md hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-sm transition-all duration-200">Roll Dice</button>
+            <!--History-->
+            <div class="mt-6 w-full">
+                <h2 class="text-xl font-semibold text-gray-700 mb-3">Roll History</h2>
+                <div id="historyList" class="bg-gray-50 p-4 rounded-xl max-h-40 overflow-y-auto border border-gray-200">
+                    <p id="noHistoryMessage" class="text-gray-500 text-center py-4">No rolls yet.</p>
+                </div>
+            </div>
+            <!--Footer-->
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
