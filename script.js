@@ -17,14 +17,21 @@ const dotPositions = {
     5: [{cx: 25, cy: 25}, 
         {cx: 75, cy: 25}, 
         {cx: 50, cy: 50},
-        {cx: 25, cy: 75}, 
+        {cx: 25, cy: 75},
         {cx: 75, cy: 75}],
-    6: [{cx: 25, cy: 25}, 
-        {cx: 75, cy: 25}, 
+    6: [{cx: 25, cy: 25},
+        {cx: 75, cy: 25},
         {cx: 25, cy: 50},
         {cx: 75, cy: 50},
-        {cx: 25, cy: 75}, 
+        {cx: 25, cy: 75},
         {cx: 75, cy: 75}],
+     7: [{cx: 30, cy: 25},
+        {cx: 70, cy: 25},
+        {cx: 12, cy: 50},
+        {cx: 50, cy: 50},
+        {cx: 87, cy: 50},
+        {cx: 30, cy: 75},
+        {cx: 70, cy: 75}],    
 };
 
 //1,2,3,4,5,6
@@ -65,7 +72,7 @@ function rollDice(){
 
     let count = 0;
     const interval = setInterval(()=>{
-        const temp = Math.floor(Math.random()*6)+1;
+        const temp = Math.floor(Math.random()*7)+1;
         diceDisplay.innerHTML = createDiceSVG(temp);
         if(++count >= 10) {
             clearInterval(interval);
